@@ -1,0 +1,19 @@
+.example-button-row {
+    display: table-cell;
+    max-width: 600px;
+  }
+
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+
+  .example-full-width {
+    width: 100%;
+  }
+
+  .border {
+    border-right: 1px solid currentColor;
+    padding: 10px;
+  }

@@ -1,0 +1,26 @@
+<div>
+    <h2>Create New Client</h2>
+    <hr>
+    <div>
+        <mat-label>name</mat-label>
+        <input matInput placeholder="Enter shared key" [(ngModel)]="nombre">
+    </div>
+    <div>
+        <mat-label>phone</mat-label>
+        <input matInput placeholder="Enter shared key" [(ngModel)]="telefono">
+    </div>
+    <div>
+        <mat-label>E-mail</mat-label>
+        <input matInput placeholder="Enter shared key" [(ngModel)]="correo">
+    </div>
+    <div>
+        <mat-label>Start date</mat-label>
+        <input type="date" matInput placeholder="Enter shared key" [(ngModel)]="fechaInicio">
+    </div>
+    <div>
+        <mat-label>End date</mat-label>
+        <input type="date" matInput [(ngModel)]="fechaFin">
+    </div>
+
+    <button type="button" style="background-color: dodgerblue;" mat-raised-button (click)="guardarCliente()">Ok</button>
+</div>
