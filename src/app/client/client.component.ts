@@ -36,7 +36,10 @@ export class ClientComponent implements OnInit {
   }
 
   abrirPopupCrearCliente(){
-    this.dialog.open(CrearClienteComponent);
+    let dialogRef = this.dialog.open(CrearClienteComponent,{width:'400px'});
+    dialogRef.afterClosed().subscribe(result=>{
+      this.consultarClientes();
+    });
   }
 
 }

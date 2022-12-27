@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'alianzaFront';
-  active = 'top';
+  step = 0;
+
+  setStep(index: number) {
+    this.step = index;
+  }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ClienteService } from '../services/cliente.service';
 
 @Component({
@@ -14,7 +14,8 @@ export class CrearClienteComponent implements OnInit {
   fechaInicio: Date;
   fechaFin: Date;
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any, private clienteService: ClienteService) {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any, private clienteService: ClienteService, 
+  private dialogRef: MatDialogRef<CrearClienteComponent>) {
     this.nombre = "";
     this.telefono = "";
     this.correo = "";
@@ -35,8 +36,7 @@ export class CrearClienteComponent implements OnInit {
     }
     this.clienteService.guardarCliente(cliente).subscribe({
       next:(resp)=>{
-        console.log("RespG", resp);
-      //  this.listaClientes = resp['objeto_respuesta'] as any[];
+        this.dialogRef.close();
       }
     });
   }

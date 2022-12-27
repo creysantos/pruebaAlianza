@@ -1,26 +1,50 @@
 <div>
     <h2>Create New Client</h2>
     <hr>
-    <div>
-        <mat-label>name</mat-label>
-        <input matInput placeholder="Enter shared key" [(ngModel)]="nombre">
+    <div class="marginBoton10">
+        <div class="label">
+            <span>name</span>
+        </div>
+        <div class="displayInlineBlock width80">
+            <input class="width80" matInput  [(ngModel)]="nombre">
+        </div>
+    </div>
+    <div class="marginBoton10">
+        <div class="label">
+            <span>phone</span>
+        </div>
+        <div class="displayInlineBlock width80">
+            <input class="width80" matInput  [(ngModel)]="telefono">
+        </div>
+    </div>
+    <div class="marginBoton10">
+        <div class="label">
+            <span>E-mail</span>
+        </div>
+        <div class="displayInlineBlock width80">
+            <input class="width80" matInput  [(ngModel)]="correo">
+        </div>
+    </div>
+    <div class="marginBoton10">
+        <div class="label">
+            <span>Start date</span>
+        </div>
+        <div class="displayInlineBlock width80">
+            <input class="width80" type="date" matInput  [(ngModel)]="fechaInicio">
+        </div>
+    </div>
+    <div class="marginBoton10">
+        <div class="label">
+            <span>End date</span>
+        </div>
+        <div class="displayInlineBlock width80">
+            <input class="width80" type="date" matInput [(ngModel)]="fechaFin">
+        </div>
     </div>
     <div>
-        <mat-label>phone</mat-label>
-        <input matInput placeholder="Enter shared key" [(ngModel)]="telefono">
-    </div>
-    <div>
-        <mat-label>E-mail</mat-label>
-        <input matInput placeholder="Enter shared key" [(ngModel)]="correo">
-    </div>
-    <div>
-        <mat-label>Start date</mat-label>
-        <input type="date" matInput placeholder="Enter shared key" [(ngModel)]="fechaInicio">
-    </div>
-    <div>
-        <mat-label>End date</mat-label>
-        <input type="date" matInput [(ngModel)]="fechaFin">
+        <div class="displayInlineBlock alinearBoton">
+            <button type="button" class="butonOK" mat-raised-button (click)="guardarCliente()">OK</button>
+        </div>
     </div>
 
-    <button type="button" style="background-color: dodgerblue;" mat-raised-button (click)="guardarCliente()">Ok</button>
 </div>
